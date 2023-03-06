@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TrainApp.Models.WeightExercise>
+
+
+
+@if (TempData["InfoMessage"] != null)
+{
+
+    <div class="alert alert-info">
+        <strong> Information: </strong>@TempData["InfoMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span>x</span>
+        </button>
+    </div>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+
+    <div class="alert alert-info">
+        <strong> Information: </strong>@TempData["SuccessMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span>x</span>
+        </button>
+    </div>
+}
+
+@if (TempData["FailMessage"] != null)
+{
+
+    <div class="alert alert-danger">
+        <strong> Error: </strong>@TempData["FailMessage"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span>x</span>
+        </button>
+    </div>
+}
+
+@if (true)
+{
+
+    <div class="Exercise_Dashboard_Content">
+       
+        <div class="Exercise_Dashboard_Nav">
+
+            <div class="Exercise_Dashboard_Nav_Button">
+                @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary", @style = "background-color:black;" })
+            </div>
+            <div class="Exercise_Dashboard_Nav_Button">
+                @Html.ActionLink("Upper Body Schedule", "Fetch_UpBody", null, new { @class = "btn btn-primary", @style = "background-color:black;" })
+            </div>
+
+            <div class="Exercise_Dashboard_Nav_Button">
+                @Html.ActionLink("Lower Body Schedule", "Fetch_LowBody", null, new { @class = "btn btn-primary", @style = "background-color:black;" })
+
+            </div>
+
+            
+            
+        </div>
+
+
+        </div>
+
+}
+else
+{
+    <p>Training Data Not Found - Log In Please</p>
+}
+
+
+
+
+
+
+
+

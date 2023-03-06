@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+
+
+<div class="signinform">
+    @*<h1>Service Login Form</h1>*@
+    <!-- container -->
+    <div class="container">
+        <!-- main content -->
+        <div class="w3l-form-info">
+            <div class="w3_info">
+                @*<h2>Login</h2>*@
+                <form action="Login" method="post">
+                    <div class="input-group">
+                        <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <input type="text" placeholder="Username" required="" name="Username">
+                    </div>
+                    <div class="input-group">
+                        <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                        <input type="Password" placeholder="Password" required="" name="Password">
+                    </div>
+                    <div class="form-row bottom">
+                        @*<div class="form-check">
+                <input type="checkbox" id="remenber" name="remenber" value="remenber" style="accent-color: black;">
+                <label for="remenber"> Remember me?</label>
+            </div>*@
+                        @*<a href="#url" class="forgot">Forgot password?</a>*@
+                    </div>
+
+                    @if (TempData["LoginInfoMessage"] != null)
+                    {
+
+                        <div style="margin-left:3em; margin-right:3em; margin-top:2em;">
+                            @TempData["LoginInfoMessage"]
+                        </div>
+                    }
+                    <button type="submit" style="color:white; margin-top:2em; background-color:black;">Log in</button>
+                   
+                </form>
+
+                @*<p>Don't have an account? <a onclick="window.location.href = '@Url.Action("Registration", "LoginAccount")';">Sign up</a></p>*@
+
+
+
+            </div>
+        </div>
+        <!-- //main content -->
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <div class="footer">
+
+    </div>
+    <!-- footer -->
+</div>
+
+<!-- fontawesome v5-->
+<script src="js/fontawesome.js"></script>
+
+
+
+

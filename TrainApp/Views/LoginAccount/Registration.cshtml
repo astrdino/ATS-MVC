@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+
+<div class="signinform">
+    <h1>Registration</h1>
+    <!-- container -->
+    <div class="container">
+        <!-- main content -->
+        <div class="w3l-form-info">
+            <div class="w3_info">
+               
+                <form action="VerifyDuplicateUser" method="post">
+                    <div class="input-group">
+                        <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                        <input type="text" placeholder="Username" required="" name="Username">
+                    </div>
+                    <div class="input-group">
+                        <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                        <input type="Password" placeholder="Password" required="" name="Password">
+                    </div>
+                    <div class="input-group">
+                        <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                        <input type="Password" placeholder="Confirm Password" required="" name="Password">
+                    </div>
+
+                    @using (Html.BeginForm("VerifyDuplicateUser", "LoginAccount"))
+            {
+
+            }
+
+                <button class="btn btn-primary btn-block" type="submit" onclick="window.location.href = '@Url.Action("VerifyDuplicateUser", "LoginAccount")';">Sign Up</button>
+                </form>
+
+
+                
+            </div>
+        </div>
+        <!-- //main content -->
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <div class="footer">
+
+    </div>
+    <!-- footer -->
+</div>
+
+<!-- fontawesome v5-->
+<script src="js/fontawesome.js"></script>
+

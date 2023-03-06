@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.Exercise_Dashboard_Nav {
+    float: left;
+    width: 200px;
+
+    padding: 5em;
+}
+
+.Exercise_Dashboard_Nav_Button {
+
+    background-color: black;
+    margin-bottom:2em;
+}

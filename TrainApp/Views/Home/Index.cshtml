@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+
+
+@if (Session["UserNameSession"] != null)
+{
+                <p>Welcome @Session["UserNameSession"]</p>
+}
+else
+{
+<p>@ViewBag.test</p>
+}
